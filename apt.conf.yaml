@@ -2,5 +2,12 @@
     - build-essential
     - curl
     - gh
+    - libffi-dev
+    - libgdbm-dev
+    - libncurses5-dev
+    - libnss3-dev
+    - libreadline-dev
+    - libssl-dev
     - wget
+    - zlib1g-dev
     - zsh
