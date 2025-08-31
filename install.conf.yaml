@@ -19,6 +19,21 @@
       path: bashrc
       force: true
 
+- apt:
+    - rustc
+    - fzf
+    - python3
+    - python3-pip
+
+- shell:
+    - [pip install --user uv, Installing uv]
+    - [uv tool install pre-commit]
+    - [uv tool install ruff]
+    - [uv tool install basedpyright]
+    - [uv tool install gpustat]
+    - [uv tool install ty]
+    - [uv tool install go-task-bin]
+
 - cargo:
     - btm
     - du-dust

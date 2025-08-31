@@ -4,3 +4,6 @@
 [submodule "dotbot-rust"]
 	path = dotbot-rust
 	url = https://github.com/alexcormier/dotbot-rust
+[submodule "dotbot-apt"]
+	path = dotbot-apt
+	url = https://github.com/bryant1410/dotbot-apt
