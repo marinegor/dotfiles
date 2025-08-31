@@ -2,6 +2,7 @@
     - build-essential
     - curl
     - gh
+    - git-crypt
     - libffi-dev
     - libgdbm-dev
     - libncurses5-dev
