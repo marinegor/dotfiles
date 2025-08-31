@@ -1,4 +1,5 @@
 . "$HOME/.cargo/env"
+export PATH="/Users/egormarin/.pixi/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 bindkey "[C" forward-word
