@@ -16,15 +16,15 @@
         "Install fzf",
       ]
     - [
-        "if ! command -v pixi &> /dev/null; then curl -fsSL https://pixi.sh/install.sh | sh",
+        "if ! command -v pixi &> /dev/null; then curl -fsSL https://pixi.sh/install.sh | sh; fi",
         Installing pixi,
       ]
     - [
-        "if ! command -v bun &> /dev/null; thencurl -fsSL https://bun.sh/install | bash",
+        "if ! command -v bun &> /dev/null; then curl -fsSL https://bun.sh/install | bash; fi",
         Installing bun,
       ]
     - [
-        "if ! command -v uv &> /dev/null; then curl -LsSf https://astral.sh/uv/install.sh | sh",
+        "if ! command -v uv &> /dev/null; then curl -LsSf https://astral.sh/uv/install.sh | sh; fi",
         Installing uv,
       ]
     - ["bash scripts/install-nerd-fonts.sh"]
