@@ -10,7 +10,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export EDITOR=vim VISUAL=vim
 export STARSHIP_CONFIG=$HOME/.config/starship.toml
-eval $(starship init zsh)
 
 alias vi='nvim'
 alias vim='nvim'
