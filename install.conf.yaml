@@ -17,7 +17,6 @@
     - ["curl -fsSL https://pixi.sh/install.sh | sh", Installing pixi]
     - ["curl -fsSL https://bun.sh/install | bash", Installing bun]
     - ["curl -LsSf https://astral.sh/uv/install.sh | sh", Installing uv]
-    - [chsh -s $(which zsh), Making zsh the default shell]
 
 - link:
     ~/.config/nvim:

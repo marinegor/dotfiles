@@ -11,3 +11,6 @@
     - wget
     - zlib1g-dev
     - zsh
+
+- shell:
+    - [chsh -s $(which zsh) $(whoami), Making zsh the default shell]
