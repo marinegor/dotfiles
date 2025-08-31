@@ -7,14 +7,26 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - ["curl -sSf  https://sh.rustup.rs | sh -s -- -y", Installing Rust]
+    - [
+        "if ! command -v rustup &> /dev/null; then curl -sSf  https://sh.rustup.rs | sh -s -- -y; fi",
+        Installing Rust,
+      ]
     - [
         "if ! command -v fzf &> /dev/null; then rm -rf ~/.fzf && git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all; fi",
         "Install fzf",
       ]
-    - ["curl -fsSL https://pixi.sh/install.sh | sh", Installing pixi]
-    - ["curl -fsSL https://bun.sh/install | bash", Installing bun]
-    - ["curl -LsSf https://astral.sh/uv/install.sh | sh", Installing uv]
+    - [
+        "if ! command -v pixi &> /dev/null; then curl -fsSL https://pixi.sh/install.sh | sh",
+        Installing pixi,
+      ]
+    - [
+        "if ! command -v bun &> /dev/null; thencurl -fsSL https://bun.sh/install | bash",
+        Installing bun,
+      ]
+    - [
+        "if ! command -v uv &> /dev/null; then curl -LsSf https://astral.sh/uv/install.sh | sh",
+        Installing uv,
+      ]
     - ["bash scripts/install-nerd-fonts.sh"]
 
 - link:
