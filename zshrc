@@ -27,16 +27,10 @@ alias vnot="deactivate"
 alias mkv="uv venv"
 alias vrun="source .venv/bin/activate"
 
-cd() {
-  if [ -n "$1" ]; then
-    z "$@" && ll --group-directories-first
-  else
-    z ~ && ll --group-directories-first
-  fi
-}
 
 if command -v starship &> /dev/null; then
-  eval $(starship init zsh)
+    echo "Initializing Starship"
+    eval $(starship init zsh)
 fi
 
 if command -v task &> /dev/null; then
@@ -44,5 +38,12 @@ if command -v task &> /dev/null; then
 fi
 
 if command -v zoxide &> /dev/null; then
+  cd() {
+    if [ -n "$1" ]; then
+      z "$@" && ll --group-directories-first
+    else
+      z ~ && ll --group-directories-first
+    fi
+  }
   eval "$(zoxide init zsh)"
 fi
