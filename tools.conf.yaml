@@ -3,12 +3,9 @@
     - du-dust
     - exa
     - fd-find
-    - jj:
+    - jj jj-cli:
         - locked
         - bin
-    - jj-cli:
-        - locked
-          - bin
     - just
     - ripgrep
     - starship:
@@ -17,7 +14,7 @@
     - zoxide:
         - locked
     - pixi:
-        - git: https://github.com/prefix-dev/pixi.git
+        - git: "https://github.com/prefix-dev/pixi.git"
         - locked
 
 - shell:
