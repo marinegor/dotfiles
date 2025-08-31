@@ -1,0 +1,23 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Egor Marin
+	email = e.marin@enpicom.com
+[push]
+	autoSetupRemote = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[alias]
+    st = status
+    del = branch -D    
+    br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+    save = !git add -A && git commit -m 'wip: autosave'
+    undo = reset HEAD~1 --mixed
+    res = !git reset --hard
+    au = !git add -u && git commit -m
+    get = !git pull origin $(git branch --show-current)
+    put = !git push origin $(git branch --show-current)
+

@@ -39,4 +39,9 @@
     ~/.bashrc:
       path: bashrc
       force: true
-    ~/.config/starship.toml: starship.toml
+    ~/.config/starship.toml:
+      path: starship.toml
+      force: true
+    ~/.gitconfig:
+      path: gitconfig
+      force: true
