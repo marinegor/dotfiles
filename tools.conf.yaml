@@ -1,5 +1,6 @@
 - cargo:
-    - btm
+    - bottom:
+        - locked
     - du-dust
     - exa
     - fd-find
@@ -18,4 +19,4 @@
         - locked
 
 - shell:
-    - [uv tool install pre-commit ruff basedpyright gpustat ty go-task-bin]
+    - for t in pre-commit ruff basedpyright gpustat ty go-task-bin; do uv tool install $t; done,
