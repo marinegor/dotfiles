@@ -1,6 +1,13 @@
 . "$HOME/.cargo/env"
 export PATH="/Users/egormarin/.pixi/bin:$PATH"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# bun completions
+[ -s "/Users/egormarin/.bun/_bun" ] && source "/Users/egormarin/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 
 alias vi='nvim'
 alias vim='nvim'

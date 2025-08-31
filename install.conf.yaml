@@ -12,6 +12,7 @@
 
 - shell:
     - ["curl -sSf  https://sh.rustup.rs | sh -s -- -y", Installing Rust]
+    - ['. "$HOME/.cargo/env"', Activate Rust]
     - [
         "if ! command -v fzf &> /dev/null; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all; fi",
         "Install fzf",

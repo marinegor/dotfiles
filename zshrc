@@ -1,6 +1,13 @@
 . "$HOME/.cargo/env"
 export PATH="/Users/egormarin/.pixi/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# bun completions
+[ -s "/Users/egormarin/.bun/_bun" ] && source "/Users/egormarin/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 
 bindkey "[C" forward-word
 bindkey "[D" backward-word
