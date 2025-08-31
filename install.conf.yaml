@@ -18,3 +18,22 @@
     ~/.bashrc:
       path: bashrc
       force: true
+
+- cargo:
+    - btm
+    - du-dust
+    - exa
+    - fd-find
+    - jj:
+        - locked
+        - bin
+    - jj-cli:
+        - locked
+        - bin
+    - just
+    - ripgrep
+    - starship:
+        - locked
+    - xq
+    - zoxide:
+        - locked
