@@ -1,0 +1,21 @@
+- cargo:
+    - btm
+    - du-dust
+    - exa
+    - fd-find
+    - jj:
+        - locked
+        - bin
+    - jj-cli:
+        - locked
+          - bin
+    - just
+    - ripgrep
+    - starship:
+        - locked
+    - xq
+    - zoxide:
+        - locked
+    - pixi:
+        - git: https://github.com/prefix-dev/pixi.git
+        - locked
