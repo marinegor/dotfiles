@@ -33,13 +33,13 @@ cd() {
 }
 
 if command -v starship &> /dev/null; then
-  eval $(starship init zsh)
+  eval $(starship init bash)
 fi
 
 if command -v task &> /dev/null; then
-  eval "$(task --completion zsh)"
+  eval "$(task --completion bash)"
 fi
 
 if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init zsh)"
+  eval "$(zoxide init bash)"
 fi
