@@ -1,8 +1,9 @@
 - apt:
-    - curl
-    - wget
     - build-essential
-    - gh
+    - cargo
+    - curl
     - fzf
+    - gh
     - python3
     - python3-pip
+    - wget

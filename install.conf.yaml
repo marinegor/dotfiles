@@ -9,7 +9,7 @@
     - [git submodule update --init --recursive, Installing submodules]
 
 - shell:
-    - [curl -sSf  https://sh.rustup.rs | sh -s -- -y, Installing Rust]
+    # - [curl -sSf  https://sh.rustup.rs | sh -s -- -y, Installing Rust]
     - [curl -fsSL https://pixi.sh/install.sh | sh; Installing pixi]
     - [curl -fsSL https://bun.sh/install | bash; Installing bun]
     - [
@@ -46,11 +46,14 @@
         - bin
     - jj-cli:
         - locked
-        - bin
+          - bin
     - just
     - ripgrep
     - starship:
         - locked
     - xq
     - zoxide:
+        - locked
+    - pixi:
+        - git: https://github.com/prefix-dev/pixi.git
         - locked
