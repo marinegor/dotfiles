@@ -29,7 +29,6 @@ alias vrun="source .venv/bin/activate"
 
 
 if command -v starship &> /dev/null; then
-    echo "Initializing Starship"
     eval $(starship init zsh)
 fi
 
