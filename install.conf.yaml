@@ -11,15 +11,16 @@
     - [git submodule update --init --recursive, Installing submodules]
 
 - shell:
-    - [curl -sSf  https://sh.rustup.rs | sh -s -- -y, Installing Rust]
+    - ["curl -sSf  https://sh.rustup.rs | sh -s -- -y", Installing Rust]
     - [
-        if ! command -v fzf &> /dev/null; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all; fi,
-        Install fzf,
+        "if ! command -v fzf &> /dev/null; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all; fi",
+        "Install fzf",
       ]
-    - [curl -fsSL https://pixi.sh/install.sh | sh; Installing pixi]
-    - [curl -fsSL https://bun.sh/install | bash; Installing bun]
+    - ["curl -fsSL https://pixi.sh/install.sh | sh", Installing pixi]
+    - ["curl -fsSL https://bun.sh/install | bash", Installing bun]
     - [
-        curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh; Installing ohmyzsh,
+        "curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh",
+        Installing ohmyzsh,
       ]
 
 - link:
@@ -34,7 +35,7 @@
       force: true
 
 - shell:
-    - [pip install --user uv, Installing uv]
+    - ["curl -LsSf https://astral.sh/uv/install.sh | sh", Installing uv]
     - [uv tool install pre-commit]
     - [uv tool install ruff]
     - [uv tool install basedpyright]
