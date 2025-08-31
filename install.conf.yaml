@@ -8,6 +8,14 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
 
+- shell:
+    - [curl -sSf  https://sh.rustup.rs | sh -s -- -y, Installing Rust]
+    - [curl -fsSL https://pixi.sh/install.sh | sh; Installing pixi]
+    - [curl -fsSL https://bun.sh/install | bash; Installing bun]
+    - [
+        curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh; Installing ohmyzsh,
+      ]
+
 - link:
     ~/.config/nvim:
       path: nvim
@@ -18,12 +26,6 @@
     ~/.bashrc:
       path: bashrc
       force: true
-
-- apt:
-    - rustc
-    - fzf
-    - python3
-    - python3-pip
 
 - shell:
     - [pip install --user uv, Installing uv]

@@ -1,5 +1,8 @@
 - apt:
-    - rustc
+    - curl
+    - wget
+    - build-essential
+    - gh
     - fzf
     - python3
     - python3-pip
