@@ -32,5 +32,14 @@ cd() {
   fi
 }
 
-eval "$(task --completion zsh)"
-eval "$(zoxide init zsh)"
+if command -v starship &> /dev/null; then
+  eval $(starship init zsh)
+fi
+
+if command -v task &> /dev/null; then
+  eval "$(task --completion zsh)"
+fi
+
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh)"
+fi

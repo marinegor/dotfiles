@@ -14,7 +14,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export EDITOR=vim VISUAL=vim
 export STARSHIP_CONFIG=$HOME/.config/starship.toml
-eval $(starship init zsh)
 
 alias vi='nvim'
 alias vim='nvim'
@@ -36,5 +35,14 @@ cd() {
   fi
 }
 
-eval "$(task --completion zsh)"
-eval "$(zoxide init zsh)"
+if command -v starship &> /dev/null; then
+  eval $(starship init zsh)
+fi
+
+if command -v task &> /dev/null; then
+  eval "$(task --completion zsh)"
+fi
+
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh)"
+fi
