@@ -13,5 +13,8 @@
       path: nvim
       force: true
     ~/.zshrc:
-      path: zsh/zshrc.zsh
+      path: zshrc
+      force: true
+    ~/.bashrc:
+      path: bashrc
       force: true
