@@ -19,4 +19,4 @@
         - locked
 
 - shell:
-    - for t in pre-commit ruff basedpyright gpustat ty go-task-bin; do uv tool install $t; done,
+    - source ~/.bashrc && bash -c 'for t in pre-commit ruff basedpyright gpustat ty go-task-bin; do uv tool install $t; done'
