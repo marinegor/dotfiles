@@ -23,3 +23,14 @@ alias myupdate='cargo install cargo-update && cargo install-update -a && omz upd
 alias vnot="deactivate"
 alias mkv="uv venv"
 alias vrun="source .venv/bin/activate"
+
+cd() {
+  if [ -n "$1" ]; then
+    z "$@" && ll --group-directories-first
+  else
+    z ~ && ll --group-directories-first
+  fi
+}
+
+eval "$(task --completion zsh)"
+eval "$(zoxide init zsh)"

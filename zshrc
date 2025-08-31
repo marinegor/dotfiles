@@ -1,3 +1,7 @@
+bindkey "[C" forward-word
+bindkey "[D" backward-word
+bindkey \^U backward-kill-line
+
 . "$HOME/.cargo/env"
 source $HOME/.local/bin/env  # uv
 export PATH="/Users/egormarin/.pixi/bin:$PATH"
@@ -12,16 +16,12 @@ export EDITOR=vim VISUAL=vim
 export STARSHIP_CONFIG=$HOME/.config/starship.toml
 eval $(starship init zsh)
 
-bindkey "[C" forward-word
-bindkey "[D" backward-word
-bindkey \^U backward-kill-line
-
-# alias vi='nvim'
-# alias vim='nvim'
-# alias ls='exa'
-# alias ll='exa -lah --sort=modified --icons --git'
-# alias l='exa -l --group-directories-first'
-# alias htop='btm --theme nord-light'
+alias vi='nvim'
+alias vim='nvim'
+alias ls='exa'
+alias ll='exa -lah --sort=modified --icons --git'
+alias l='exa -l --group-directories-first'
+alias htop='btm --theme nord-light'
 alias myupdate='cargo install cargo-update && cargo install-update -a && omz update -y && rustup update'
 
 alias vnot="deactivate"
