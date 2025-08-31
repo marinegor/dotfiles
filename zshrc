@@ -1,3 +1,6 @@
+. "$HOME/.cargo/env"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 bindkey "[C" forward-word
 bindkey "[D" backward-word
 bindkey \^U backward-kill-line
