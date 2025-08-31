@@ -19,3 +19,6 @@
     - pixi:
         - git: https://github.com/prefix-dev/pixi.git
         - locked
+
+- shell:
+    - [uv tool install pre-commit ruff basedpyright gpustat ty go-task-bin]

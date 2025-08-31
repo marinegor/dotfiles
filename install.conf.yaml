@@ -1,4 +1,4 @@
-# git clone https://github.com/marinegor/dotfiles.git --recursive; cd dotfiles && sudo ./install -p dotbot-apt/apt.py -c apt.conf.yaml && ./install; . "$HOME/.cargo/env"; install -c cargo.conf.yaml
+# git clone https://github.com/marinegor/dotfiles.git --recursive; cd dotfiles && sudo ./install -p dotbot-apt/apt.py -c apt.conf.yaml && ./install; source ~/.bashrc && ./install -c tools.conf.yaml
 
 - defaults:
     link:
@@ -28,11 +28,3 @@
     ~/.bashrc:
       path: bashrc
       force: true
-
-- shell:
-    - [uv tool install pre-commit]
-    - [uv tool install ruff]
-    - [uv tool install basedpyright]
-    - [uv tool install gpustat]
-    - [uv tool install ty]
-    - [uv tool install go-task-bin]
