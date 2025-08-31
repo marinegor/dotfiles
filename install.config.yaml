@@ -2,13 +2,12 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.bashrc: bashrc
     ~/.zshrc: zshrc
-    ~/.vimrc: vimrc
+    ~/.config/nvim: nvim
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-
