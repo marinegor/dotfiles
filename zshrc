@@ -7,7 +7,9 @@ export PATH="/Users/egormarin/.pixi/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
+export EDITOR=vim VISUAL=vim
+export STARSHIP_CONFIG=$HOME/.config/starship.toml
+eval $(starship init zsh)
 
 bindkey "[C" forward-word
 bindkey "[D" backward-word
@@ -34,5 +36,4 @@ cd() {
 }
 
 eval "$(task --completion zsh)"
-eval $(starship init zsh)
 eval "$(zoxide init zsh)"
