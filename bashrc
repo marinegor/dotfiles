@@ -1,4 +1,5 @@
 . "$HOME/.cargo/env"
+source $HOME/.local/bin/env  # uv
 export PATH="/Users/egormarin/.pixi/bin:$PATH"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # bun completions
