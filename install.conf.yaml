@@ -1,4 +1,4 @@
-# git clone https://github.com/marinegor/dotfiles.git --recursive; cd dotfiles && sudo ./install -p dotbot-apt/apt.py -c packages.conf.yaml && ./install
+# git clone https://github.com/marinegor/dotfiles.git --recursive; cd dotfiles && sudo ./install -p dotbot-apt/apt.py -c apt.conf.yaml && ./install; . "$HOME/.cargo/env"; install -c cargo.conf.yaml
 
 - defaults:
     link:
@@ -9,20 +9,14 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-
-- shell:
     - ["curl -sSf  https://sh.rustup.rs | sh -s -- -y", Installing Rust]
-    - ['. "$HOME/.cargo/env"', Activate Rust]
     - [
         "if ! command -v fzf &> /dev/null; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all; fi",
         "Install fzf",
       ]
     - ["curl -fsSL https://pixi.sh/install.sh | sh", Installing pixi]
     - ["curl -fsSL https://bun.sh/install | bash", Installing bun]
-    - [
-        "curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh",
-        Installing ohmyzsh,
-      ]
+    - ["curl -LsSf https://astral.sh/uv/install.sh | sh", Installing uv]
 
 - link:
     ~/.config/nvim:
@@ -36,32 +30,9 @@
       force: true
 
 - shell:
-    - ["curl -LsSf https://astral.sh/uv/install.sh | sh", Installing uv]
     - [uv tool install pre-commit]
     - [uv tool install ruff]
     - [uv tool install basedpyright]
     - [uv tool install gpustat]
     - [uv tool install ty]
     - [uv tool install go-task-bin]
-
-- cargo:
-    - btm
-    - du-dust
-    - exa
-    - fd-find
-    - jj:
-        - locked
-        - bin
-    - jj-cli:
-        - locked
-          - bin
-    - just
-    - ripgrep
-    - starship:
-        - locked
-    - xq
-    - zoxide:
-        - locked
-    - pixi:
-        - git: https://github.com/prefix-dev/pixi.git
-        - locked
