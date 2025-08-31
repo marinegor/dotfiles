@@ -9,6 +9,7 @@
     - libnss3-dev
     - libreadline-dev
     - libssl-dev
+    - unzip
     - wget
     - zlib1g-dev
     - zsh
