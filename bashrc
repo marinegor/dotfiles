@@ -22,6 +22,7 @@ alias myupdate='cargo install cargo-update && cargo install-update -a && omz upd
 alias vnot="deactivate"
 alias mkv="uv venv"
 alias vrun="source .venv/bin/activate"
+alias j=just
 
 cd() {
   if [ -n "$1" ]; then
