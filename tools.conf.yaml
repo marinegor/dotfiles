@@ -17,6 +17,8 @@
     - pixi:
         - git: "https://github.com/prefix-dev/pixi.git"
         - locked
+    - quickenv:
+        - locked
 
 - shell:
     - source ~/.bashrc && bash -c 'for t in pre-commit ruff basedpyright gpustat ty go-task-bin; do uv tool install $t; done'
