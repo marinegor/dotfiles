@@ -33,7 +33,7 @@ cd() {
 }
 
 if command -v starship &> /dev/null; then
-  eval $(starship init bash)
+  eval "$(starship init bash)"
 fi
 
 if command -v task &> /dev/null; then

@@ -30,7 +30,7 @@ alias j='just -g'
 
 
 if command -v starship &> /dev/null; then
-    eval $(starship init zsh)
+    eval "$(starship init zsh)"
 fi
 
 if command -v task &> /dev/null; then
