@@ -1,6 +1,7 @@
 - apt:
     - build-essential
     - curl
+    - direnv
     - gh
     - git-crypt
     - libffi-dev
@@ -16,3 +17,7 @@
 
 - shell:
     - [chsh -s $(which zsh) $(whoami), Making zsh the default shell]
+    - [
+        owner=$(whoami) && sudo chown $owner -R .,
+        Changing ownership of dotfiles,
+      ]
