@@ -1,3 +1,4 @@
+setopt interactivecomments
 bindkey "[C" forward-word
 bindkey "[D" backward-word
 bindkey \^U backward-kill-line
