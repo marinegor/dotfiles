@@ -1,6 +1,10 @@
 bindkey "[C" forward-word
 bindkey "[D" backward-word
 bindkey \^U backward-kill-line
+bindkey "\e[1;3D" backward-word     # ⌥←
+bindkey "\e[1;3C" forward-word      # ⌥→
+bindkey "^[[1;9D" beginning-of-line # cmd+←
+bindkey "^[[1;9C" end-of-line       # cmd+→
 
 . "$HOME/.cargo/env"
 source $HOME/.local/bin/env  # uv
