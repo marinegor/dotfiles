@@ -32,6 +32,9 @@ alias mkv="uv venv"
 alias vrun="source .venv/bin/activate"
 alias j='just -g'
 
+if command -v direnv &> /dev/null; then
+  eval "$(direnv hook bash)"
+fi
 
 if command -v starship &> /dev/null; then
     eval "$(starship init zsh)"

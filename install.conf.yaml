@@ -45,3 +45,6 @@
     ~/.gitconfig:
       path: gitconfig
       force: true
+    ~/.config/justfile:
+      path: justfile
+      force: true
