@@ -27,6 +27,10 @@
         "if ! command -v uv &> /dev/null; then curl -LsSf https://astral.sh/uv/install.sh | sh; fi",
         Installing uv,
       ]
+    - [
+        "if ! command -v direnv &> /dev/null; then curl -sfL https://direnv.net/install.sh | bash; fi",
+        Installing direnv,
+      ]
     - ["bash scripts/install-nerd-fonts.sh"]
 
 - link:
