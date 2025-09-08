@@ -19,6 +19,8 @@
         - locked
     - quickenv:
         - locked
+    - hyperfine:
+        - locked
 
 - shell:
     - source ~/.bashrc && bash -c 'for t in pre-commit ruff basedpyright gpustat ty go-task-bin; do uv tool install $t; done'
