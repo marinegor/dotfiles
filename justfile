@@ -1,7 +1,6 @@
 glances:
     TERM=linux TERMINFO=/etc/terminfo glances
 
-
 # Kill process by port
 killport port:
     lsof -ti:{{port}} | xargs kill -9
