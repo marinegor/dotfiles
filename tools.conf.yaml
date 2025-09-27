@@ -34,6 +34,8 @@
         - locked
     - httpjail:
         - locked
+    - sd:
+        - locked
 
 - shell:
     - source ~/.bashrc && bash -c 'for t in pre-commit ruff basedpyright gpustat ty go-task-bin asciinema magic-wormhole; do uv tool install $t; done'
