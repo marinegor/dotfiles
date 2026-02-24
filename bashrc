@@ -47,3 +47,7 @@ fi
 if command -v zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
 fi
+
+if command -v tirith &> /dev/null; then
+  eval "$(tirith init --shell zsh)"
+fi

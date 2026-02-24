@@ -40,6 +40,10 @@ if command -v task &> /dev/null; then
   eval "$(task --completion zsh)"
 fi
 
+if command -v tirith &> /dev/null; then
+  eval "$(tirith init --shell zsh)"
+fi
+
 if command -v zoxide &> /dev/null; then
   cd() {
     if [ -n "$1" ]; then
@@ -52,7 +56,6 @@ if command -v zoxide &> /dev/null; then
 fi
 
 function proxy() {
-	# hosts=(bastion digitalocean)
 	hosts=(vdsina-moscow)
 	port=12000
 	for host in $hosts; do
