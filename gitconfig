@@ -20,3 +20,9 @@
     au = !git add -u && git commit -m
     get = !git pull origin $(git branch --show-current) --rebase
     put = !git push origin $(git branch --show-current)
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

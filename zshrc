@@ -55,24 +55,3 @@ if command -v zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
-function proxy() {
-	hosts=(vdsina-moscow)
-	port=12000
-	for host in $hosts; do
-		echo "  Creating tunnel to ${host}..."
-		autossh -M 0 -f -N -D ${port} ${host}
-		echo "  connected to ${host}, port ${port}"
-		port=$((port+1))
-	done
-}
-
-function unproxy() {
-	mask='autossh -M 0 -f -N -D'
-	echo "Found $(pgrep -af ${mask} | wc -l) tunnels"
-	echo "Killing those ssh tunnels..."
-	pkill -f ${mask} && echo "Done"
-}
-
-function reproxy() {
-	unproxy; proxy
-}

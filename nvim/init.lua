@@ -35,7 +35,7 @@ require("lazy").setup({
 	spec = {
 		{ "projekt0n/github-nvim-theme", name = "github-theme" },
 		{ "nvim-telescope/telescope.nvim", tag = "0.1.8", dependencies = { "nvim-lua/plenary.nvim" } },
-		{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+		{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", branch="master"},
 		{
 			"nvim-neo-tree/neo-tree.nvim",
 			branch = "v3.x",
